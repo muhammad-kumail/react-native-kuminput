@@ -1,0 +1,28 @@
+{
+  "name": "react-native-kuminput",
+  "version": "0.0.6",
+  "description": "This is a react native npm package containing a More and stylish functionalities rather than TextInput.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muhammad-kumail/react-native-kuminput.git"
+  },
+  "keywords": [
+    "kuminput",
+    "react-native-kuminput",
+    "react native kuminput",
+    "react native",
+    "text field",
+    "textinput",
+    "text input field"
+  ],
+  "author": "Kumail Baloch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/muhammad-kumail/react-native-kuminput/issues"
+  },
+  "homepage": "https://github.com/muhammad-kumail/react-native-kuminput#readme"
+}
