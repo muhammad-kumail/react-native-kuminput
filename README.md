@@ -1,7 +1,9 @@
 # react-native-kuminput
 This package contain more stylish and more functionalities than TextInput from react native
 ## Installation
-npm i react-native-vector-icons react-native-elements react-native-kuminput -f
+Native Cli: npm i react-native-vector-icons react-native-elements react-native-kuminput -f
+
+Expo: npm i react-native-elements react-native-kuminput
 ## Demo
 ![Here is the demo](https://user-images.githubusercontent.com/56933027/208092557-e8222d5e-be1c-4ac2-9418-a1f4851a540e.gif)
 
@@ -39,7 +41,8 @@ export default function App(){
 }
 ```
 ## Note
-After installing npm packages, configure the react-native-vector-icons first before running a code see here https://aboutreact.com/react-native-vector-icons/
+After installing npm packages, configure the react-native-vector-icons first before running a code see here https://aboutreact.com/react-native-vector-icons/.
+If you are using Expo, no need to install or configure react-native-vector-icons
 ## Props
 placeholder: String
 
