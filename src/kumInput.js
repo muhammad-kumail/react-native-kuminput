@@ -7,7 +7,7 @@ import {
 import * as Animatable from 'react-native-animatable'
 import { Icon } from 'react-native-elements';
 
-export function KumInput({ placeholder,label ,error,multiline,secureTextEntry, keyboardType, maxLength, inputStyle, style,rightIcon, leftIcon, borderColorOnFocus, borderColorOnBlur, onFocus, onBlur, onChangeText, onEndEditing, placeholderTextColor, value, defaultValue, onSubmitEditing }) {
+export default function KumInput({ placeholder,label ,error,multiline,secureTextEntry, keyboardType, maxLength, inputStyle, style,rightIcon, leftIcon, borderColorOnFocus, borderColorOnBlur, onFocus, onBlur, onChangeText, onEndEditing, placeholderTextColor, value, defaultValue, onSubmitEditing }) {
     const [bColor, setBColor] = useState(borderColorOnBlur != null ? borderColorOnBlur : 'black')
     return (
         <View>
