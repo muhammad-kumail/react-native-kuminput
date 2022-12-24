@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {
     StyleSheet,
     View,
+    Text,
     TextInput
 } from 'react-native';
 import * as Animatable from 'react-native-animatable'
