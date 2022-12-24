@@ -8,7 +8,7 @@ import {
 import * as Animatable from 'react-native-animatable'
 import { Icon } from 'react-native-elements';
 
-export default function KumInput({ placeholder,label ,error,multiline,secureTextEntry, keyboardType, maxLength, inputStyle, style,rightIcon, leftIcon, borderColorOnFocus, borderColorOnBlur, onFocus, onBlur, onChangeText, onEndEditing, placeholderTextColor, value, defaultValue, onSubmitEditing }) {
+export default function KumInput({ placeholder,label ,error,editable,multiline,secureTextEntry, keyboardType, maxLength, inputStyle, style,rightIcon, leftIcon, borderColorOnFocus, borderColorOnBlur, onFocus, onBlur, onChangeText, onEndEditing, placeholderTextColor, value, defaultValue, onSubmitEditing }) {
     const [bColor, setBColor] = useState(borderColorOnBlur != null ? borderColorOnBlur : 'black')
     return (
         <View>
@@ -36,6 +36,7 @@ export default function KumInput({ placeholder,label ,error,multiline,secureText
                         secureTextEntry={secureTextEntry}
                         style={[{ fontSize: 16 }, inputStyle]}
                         value={value}
+                        editable={editable}
                         defaultValue={defaultValue}
                         onChangeText={onChangeText}
                         onEndEditing={onEndEditing}
@@ -61,7 +62,7 @@ export default function KumInput({ placeholder,label ,error,multiline,secureText
                 }
             </View>
             {
-                error?.condition || error == null?
+                error?.condition || error != null?
                 <Animatable.Text animation={error?.animation} style={[{color: 'red'},error?.style]}>
                     {error?.message}
                 </Animatable.Text>:null

@@ -69,6 +69,7 @@ If you are using Expo, no need to install or configure react-native-vector-icons
 |keyboardType|String|default|
 |maxLength|Number|no limit|
 |multiline|Boolean|false|
+|editable|Boolean|true|
 |inputStyle|Object|{}|
 |rightIcon|Object|{name: null, type: null, color: null, size: 25, onPress:()=>{}}|
 |leftIcon|Object|{name: null, type: null, color: null, size: 25, onPress:()=>{}}|
