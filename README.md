@@ -33,7 +33,7 @@ export default function App(){
                     onPress:()=>console.log("left icon pressed!")
                 }}
                 rightIcon={{
-                    name:{isSecureEntry ? 'visibility-off' : 'visibility'},
+                    name: isSecureEntry ? 'visibility-off' : 'visibility',
                     type: 'material',
                     color: '#014e78',
                     onPress:()=>setIsSecureEntry(!isSecureEntry)
