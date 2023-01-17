@@ -1,6 +1,6 @@
 {
   "name": "react-native-kuminput",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "This is a react native npm package containing a More and stylish functionalities rather than TextInput.",
   "main": "index.js",
   "scripts": {

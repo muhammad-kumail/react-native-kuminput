@@ -44,8 +44,14 @@ export default function KumInput({ placeholder,label ,error,editable,multiline,s
                         keyboardType={keyboardType}
                         maxLength={maxLength}
                         multiline={multiline}
-                        onFocus={() => { setBColor(borderColorOnFocus != null ? borderColorOnFocus : 'black'); onFocus }}
-                        onBlur={() => { setBColor(borderColorOnBlur != null ? borderColorOnBlur : 'black'); onBlur }}
+                        onFocus={()=>{
+                            onFocus?onFocus():null
+                            setBColor(borderColorOnFocus != null ? borderColorOnFocus : 'black');
+                        }}
+                        onBlur={()=>{
+                            onBlur?onBlur():null
+                            setBColor(borderColorOnBlur != null ? borderColorOnBlur : 'black');
+                        }}
                     />
                 </View>
                 {
