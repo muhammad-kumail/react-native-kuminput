@@ -8,17 +8,17 @@ import {
 import * as Animatable from 'react-native-animatable'
 import { Icon } from 'react-native-elements';
 
-export default function KumInput({ placeholder,label ,error,editable,multiline,secureTextEntry, keyboardType, maxLength, inputStyle, style,rightIcon, leftIcon, borderColorOnFocus, borderColorOnBlur, onFocus, onBlur, onChangeText, onEndEditing, placeholderTextColor, value, defaultValue, onSubmitEditing }) {
+export default function KumInput({ placeholder, label, error, editable, multiline, secureTextEntry, keyboardType, maxLength, style, containerStyle, rightIcon, leftIcon, borderColorOnFocus, borderColorOnBlur, onFocus, onBlur, onChangeText, onEndEditing, placeholderTextColor, value, defaultValue, onSubmitEditing }) {
     const [bColor, setBColor] = useState(borderColorOnBlur != null ? borderColorOnBlur : 'black')
     return (
         <View>
             {
-                label?.name == null||label == null?null:
-                <Text style={[label?.style]}>{label?.name}</Text>
+                label?.name == null || label == null ? null :
+                    <Text style={[label?.style]}>{label?.name}</Text>
             }
-            <View style={[{ borderColor: bColor, flexDirection: 'row' }, style]}>
+            <View style={[{ borderColor: bColor, flexDirection: 'row' }, containerStyle]}>
                 {
-                    leftIcon?.name == null || leftIcon == null? null :
+                    leftIcon?.name == null || leftIcon == null ? null :
                         <View style={[styles.setCenter, { flex: 1, paddingHorizontal: 5 }]}>
                             <Icon
                                 type={leftIcon?.type}
@@ -34,7 +34,7 @@ export default function KumInput({ placeholder,label ,error,editable,multiline,s
                         placeholder={placeholder}
                         placeholderTextColor={placeholderTextColor}
                         secureTextEntry={secureTextEntry}
-                        style={[{ fontSize: 16 }, inputStyle]}
+                        style={[{ fontSize: 16 }, style]}
                         value={value}
                         editable={editable}
                         defaultValue={defaultValue}
@@ -44,18 +44,18 @@ export default function KumInput({ placeholder,label ,error,editable,multiline,s
                         keyboardType={keyboardType}
                         maxLength={maxLength}
                         multiline={multiline}
-                        onFocus={()=>{
-                            onFocus?onFocus():null
+                        onFocus={() => {
+                            onFocus ? onFocus() : null
                             setBColor(borderColorOnFocus != null ? borderColorOnFocus : 'black');
                         }}
-                        onBlur={()=>{
-                            onBlur?onBlur():null
+                        onBlur={() => {
+                            onBlur ? onBlur() : null
                             setBColor(borderColorOnBlur != null ? borderColorOnBlur : 'black');
                         }}
                     />
                 </View>
                 {
-                    rightIcon?.name ==null || rightIcon == null ? null :
+                    rightIcon?.name == null || rightIcon == null ? null :
                         <View style={[styles.setCenter, { flex: 1, paddingHorizontal: 5 }]}>
                             <Icon
                                 type={rightIcon?.type}
@@ -68,10 +68,10 @@ export default function KumInput({ placeholder,label ,error,editable,multiline,s
                 }
             </View>
             {
-                error?.condition || error != null?
-                <Animatable.Text animation={error?.animation} style={[{color: 'red'},error?.style]}>
-                    {error?.message}
-                </Animatable.Text>:null
+                error?.condition && error != null ?
+                    <Animatable.Text animation={error?.animation} style={[{ color: 'red' }, error?.style]}>
+                        {error?.message}
+                    </Animatable.Text> : null
             }
         </View>
     );

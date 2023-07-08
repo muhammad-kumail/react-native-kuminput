@@ -8,7 +8,7 @@ Expo: npm i react-native-elements react-native-animatable react-native-kuminput
 ![Here is the demo](https://user-images.githubusercontent.com/56933027/208092557-e8222d5e-be1c-4ac2-9418-a1f4851a540e.gif)
 
 ## Sample Code
-```
+```javascript
 import React, { useState } from 'react';
 import {KumInput} from 'react-native-kuminput';
 import {
@@ -46,8 +46,8 @@ export default function App(){
                 }}
                 borderColorOnFocus={'#014e78'}
                 onChangeText={(val) => console.log(val)}
-                inputStyle={{fontSize: 16}}
-                style={{borderWidth: 1, borderRadius: 10,paddingVertical: 2, margin: 5, marginHorizontal: 10 }}
+                style={{fontSize: 16}}
+                containerStyle={{borderWidth: 1, borderRadius: 10,paddingVertical: 2, margin: 5, marginHorizontal: 10 }}
             />
         </View>
     );
@@ -65,12 +65,12 @@ If you are using Expo, no need to install or configure react-native-vector-icons
 |value|String|empty string|
 |defaultValue|String|empty string|
 |secureTextEntry|Boolean|false|
-|style|Object|{}|
+|containerStyle|Object|{}|
 |keyboardType|String|default|
 |maxLength|Number|no limit|
 |multiline|Boolean|false|
 |editable|Boolean|true|
-|inputStyle|Object|{}|
+|style|Object|{}|styles of the input field|
 |rightIcon|Object|{name: null, type: null, color: null, size: 25, onPress:()=>{}}|
 |leftIcon|Object|{name: null, type: null, color: null, size: 25, onPress:()=>{}}|
 |error|Object|{condition: false, message:null,animation:null,style: {}}|animation props: bounce, flash, jello, pulse, rotate, rubberBand, bounceIn and much more you can check at https://www.npmjs.com/package/react-native-animatable|
